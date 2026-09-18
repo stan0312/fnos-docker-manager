@@ -73,6 +73,8 @@ jobs:
             CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO
           mkdir -p build/export/Payload
           cp -r build/iosApp.xcarchive/Products/Applications/*.app build/export/Payload/
+          # TrollStore 兼容：对 .app 做 ad-hoc 签名，避免无签名包在部分 iOS 版本上无法启动
+          codesign --force --sign - --deep build/export/Payload/*.app
           cd build/export && zip -qry 飞牛管家-trollstore.ipa Payload
 
       - name: Upload IPA artifact
