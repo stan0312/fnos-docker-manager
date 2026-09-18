@@ -1,0 +1,19 @@
+.gradle/
+build/
+*/build/
+.kotlin/
+.idea/
+.DS_Store
+*.iml
+local.properties
+iosApp/Pods/
+iosApp/build/
+xcuserdata/
+*.xcworkspace/xcuserdata/
+DerivedData/
+composeApp/build/
+.konan/
+
+# 本地签名配置（TEAM_ID 含隐私信息，不入库）
+iosApp/Configuration/Config.xcconfig
+!iosApp/Configuration/Config.xcconfig.example

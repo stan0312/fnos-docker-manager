@@ -1,0 +1,6 @@
+// 复制为 Config.xcconfig 并填写（Config.xcconfig 已被 .gitignore 排除，不会提交）
+// 在 Xcode 的 Build Settings 里填写你的开发者 Team ID（或留空以构建到模拟器）
+TEAM_ID=
+// Bundle ID（改成你自己的）
+BUNDLE_ID=com.fnos.dockermanager
+APP_NAME=飞牛管家
