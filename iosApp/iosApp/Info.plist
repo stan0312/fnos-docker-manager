@@ -54,10 +54,9 @@
 	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<!-- 允许访问局域网内 HTTP 的 Docker API（本地网络） -->
-		<key>NSAllowsLocalNetworking</key>
-		<true/>
-		<!-- 个人侧载使用：允许 HTTP 访问任意域名（如 asuscomm.com DDNS）。
+		<!-- 个人侧载使用：允许 HTTP 访问任意域名与局域网 IP（如 asuscomm.com DDNS、192.168.x.x）。
+		     注意：iOS 10+ 若同时存在 NSAllowsLocalNetworking/NSExceptionDomains 等例外键，
+		     系统会忽略 NSAllowsArbitraryLoads（已知行为），因此这里只保留全局放行。
 		     若未来上架 App Store，需改为按域名 NSExceptionDomains 白名单或强制 HTTPS -->
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
