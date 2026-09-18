@@ -22,6 +22,12 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<!-- Compose Multiplatform iOS 官方推荐：ProMotion 屏（如 14 Pro Max）上避免
+	     CADisplayLink 帧率相关崩溃/异常，必须为 true -->
+	<key>CADisableMinimumFrameDurationOnPhone</key>
+	<true/>
+	<key>UIApplicationSupportsIndirectInputEvents</key>
+	<true/>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
