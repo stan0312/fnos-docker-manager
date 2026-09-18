@@ -51,7 +51,10 @@
 		<!-- 允许访问局域网内 HTTP 的 Docker API（本地网络） -->
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
-		<!-- 若你使用公网 HTTP 域名，可在此添加 NSExceptionDomains；更建议使用 HTTPS -->
+		<!-- 个人侧载使用：允许 HTTP 访问任意域名（如 asuscomm.com DDNS）。
+		     若未来上架 App Store，需改为按域名 NSExceptionDomains 白名单或强制 HTTPS -->
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 	</dict>
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>需要访问局域网内的飞牛 NAS Docker 服务以进行容器管理</string>
